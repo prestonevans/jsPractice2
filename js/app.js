@@ -25,6 +25,12 @@ setInterval(() => {
         hours -= 12;
     }
     let minutes = new Date().getMinutes();
+    if(minutes < 10) {
+        minutes = '0' + minutes;
+    }
     let seconds = new Date().getSeconds();
+    if(seconds < 10) {
+        seconds = '0' + seconds;
+    }
     h1.innerText = `${hours}:${minutes}:${seconds}`;
 }, 1000);
